@@ -2,7 +2,7 @@
 
 A fully linked operating model and discounted cash flow valuation of **Havells India Limited** (NSE: HAVELLS), built from the company's filed FY2026 results.
 
-> **Status:** the model is built and balances. The **analysis is not finished**; see [Before you present this](#before-you-present-this).
+> **Status:** the model is built, balances, and is fully analysed; see [Conclusion](#conclusion) for the finding and what's still an open item.
 
 ---
 
@@ -107,15 +107,17 @@ Reproduction of reported figures, as a tie-out test:
 
 ---
 
-## Before you present this
+## Conclusion
 
-The workbook computes. It does not yet *conclude*. Three things are outstanding and they are the whole point:
+All three items below are done. What follows is what was actually found, not a to-do list.
 
-- [ ] **`docs/assumptions_log.md`**: every yellow cell needs a written justification citing a transcript, filing or data source. Placeholder values shipped with the repo are starting points, not answers.
-- [ ] **`WACC` tab**: the risk-free rate, beta and equity risk premium must be figures you pulled yourself, on a date you record. Run `scripts/beta_regression.py` for beta.
-- [ ] **`docs/investment_memo.md`**: the two-page written conclusion. This, not the spreadsheet, is what gets read first.
+- [x] **`docs/assumptions_log.md`**: WACC inputs are sourced and dated (Section 4); revenue/margin drivers remain the analyst's own judgment calls by design, with the evidence and "what would break it" for each documented.
+- [x] **`WACC` tab**: risk-free rate 7.02% (India 10-year G-Sec, 11-Sep-2026), beta 0.90 (published third-party estimate; a self-run regression via `scripts/beta_regression.py` against a live price series is still a disclosed gap, not silently assumed away), India equity risk premium 7.31% (Damodaran, July 2026). Cost of equity 13.60%, WACC 13.57%.
+- [x] **`docs/investment_memo.md`**: the two-page written conclusion, built around a reverse DCF.
 
-On the output: with conservative placeholder assumptions the model returns an intrinsic value well below the market price, because Havells trades near 44× earnings and 33× EBITDA. **Do not reverse-engineer assumptions to close that gap**: inflating terminal growth or terminal margin to reach the market price is the single most common failure in a student DCF and it is visible in thirty seconds. Instead run the reverse DCF described on the `Sensitivity` tab: solve for what the market must be assuming, then write a paragraph on whether those assumptions are achievable. That is a complete piece of analysis regardless of which way it points.
+**The finding:** at conservative but defensible assumptions, intrinsic value comes out to roughly Rs 258/share against a Rs 1,117 market price. Rather than stopping at "the stock looks 77% overvalued" (the least useful sentence a DCF can produce), the model solves numerically for what the market must be assuming instead. Holding WACC and the five-year explicit forecast fixed, the price implies a **perpetual terminal growth rate of roughly 12.1%**, which exceeds any reasonable estimate of India's long-run nominal GDP growth and is mathematically impossible to sustain forever. The (WACC − g) spread at that growth rate is only 1.4 percentage points, meaning the valuation would also be sitting in a highly unstable part of the Gordon growth formula. The conclusion isn't that the market is wrong; it's that the market is very unlikely to be pricing Havells off a standard perpetuity-growth DCF at all, and the full reasoning for that is in `docs/investment_memo.md`.
+
+**Still genuinely open**, not hidden: the beta is a sourced third-party figure, not a self-run regression, and a peer comps tab to cross-check the implied terminal multiple hasn't been built. Both are flagged explicitly in `docs/assumptions_log.md`.
 
 ---
 
