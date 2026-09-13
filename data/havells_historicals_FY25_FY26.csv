@@ -1,0 +1,62 @@
+# Havells India Limited - reported standalone financials, INR crore
+# Source: Information Update on Financial Results, Q4 & FY ended 31 March 2026,
+#         filed with NSE and BSE on 22 April 2026
+statement,line_item,FY2025A,FY2026A
+income_statement,Net revenue,21746,22466
+income_statement,Contribution,4343,4458
+income_statement,Depreciation and amortisation,399,429
+income_statement,Advertising and sales promotion,622,602
+income_statement,Other SG&A,1970,2072
+income_statement,EBITDA,2149,2213
+income_statement,Other income net,259,204
+income_statement,Fair value gain on financial asset (unrealised),0,283
+income_statement,Exceptional items,0,-45
+income_statement,Profit before tax,2009,2226
+income_statement,Tax,520,520
+income_statement,Net profit,1489,1705
+segment_revenue,Switchgears,2395,2585
+segment_revenue,Cables,7184,8677
+segment_revenue,Lighting and Fixtures,1653,1655
+segment_revenue,Electrical Consumer Durables,4011,3874
+segment_revenue,Others,1379,1727
+segment_revenue,Lloyd Consumer,5123,3948
+segment_contribution_margin_pct,Switchgears,37.9,36.9
+segment_contribution_margin_pct,Cables,14.1,16.9
+segment_contribution_margin_pct,Lighting and Fixtures,32.6,32.3
+segment_contribution_margin_pct,Electrical Consumer Durables,23.8,23.0
+segment_contribution_margin_pct,Others,17.0,16.2
+segment_contribution_margin_pct,Lloyd Consumer,13.5,8.4
+segment_result,Switchgears,539,589
+segment_result,Cables,772,1138
+segment_result,Lighting and Fixtures,254,248
+segment_result,Electrical Consumer Durables,399,343
+segment_result,Others,25,61
+segment_result,Lloyd Consumer,131,-203
+balance_sheet,Property plant equipment and intangibles,4745,5761
+balance_sheet,Investments,74,956
+balance_sheet,Other non-current assets,158,247
+balance_sheet,Inventories,4007,4398
+balance_sheet,Trade receivables,1254,782
+balance_sheet,Cash equivalents and other bank balances,3353,2351
+balance_sheet,Other financial assets,6,9
+balance_sheet,Other current assets,179,221
+balance_sheet,Total assets,13775,14724
+balance_sheet,Equity share capital,63,63
+balance_sheet,Other equity,8268,9414
+balance_sheet,Lease liabilities non-current,241,188
+balance_sheet,Deferred tax liabilities net,375,435
+balance_sheet,Other non-current liabilities,67,62
+balance_sheet,Lease liabilities current,78,77
+balance_sheet,Trade payables,3040,2903
+balance_sheet,Other financial liabilities,865,868
+balance_sheet,Other current liabilities,778,715
+balance_sheet,Total equity and liabilities,13775,14724
+cash_flow,Operating net cash flow,1543,1557
+cash_flow,Capital expenditure,-753,-1484
+cash_flow,Investments,0,-610
+cash_flow,Dividends paid,-627,-627
+cash_flow,Closing cash and cash equivalents,3353,2351
+ratios,Debtor days,21,13
+ratios,Inventory days,67,71
+ratios,Creditor days,51,47
+ratios,Net working capital days,37,37
